@@ -1,0 +1,7 @@
+DEBUG=nodejs_demo ./bin/www
+
+
+ENV=prod ./bin/www
+
+
+curl -X POST 127.0.0.1:3000/posts -H "Content-Type: application/json" -d'{"author":"wesb","title":"test post","content":"hello world"}'

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Intro to AngularJS</title>
+		<!-- Our styles and code -->
+		<link rel="stylesheet" href="./css/angular-demo.css">
+		<script src='./js/angular-demo.js'></script>
+	</head>
+	<body ng-app='blogApp'>
+		<div class="main-page" ng-controller='blogController'>
+
+			<!-- header -->
+			<nav class='navbar navbar-inverse navbar-fixed-top'>
+				<div class='container'>
+					<a class='navbar-brand'>CS 360 Magical Blog of Wonder and Joy</a>
+				</div>
+			</nav>
+
+			<div class='container'>
+				<div>
+					<a class='btn btn-success' ng-click='addPost()'>Add Blog Post</a>
+				</div>
+
+				<!-- blog post list -->
+				<div id="post-list">
+					<ul>
+						<li ng-repeat='post in posts'>
+							<div blog-post ng-model='post'></div>
+							<div ng-if='post.is_editing' blog-post-editor ng-model='post'></div>
+							<br />
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<span>Built with love from Qualtrics</span>
+		</footer>
+	</body>
+</html>

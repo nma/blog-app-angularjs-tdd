@@ -1,0 +1,8 @@
+/node_modules
+.DS_Store
+*.swp
+npm-debug.log.bowerrc
+/public
+*.sublime-*
+src/client/vendor
+npm-debug.log
